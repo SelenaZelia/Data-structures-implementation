@@ -1,6 +1,7 @@
 package com.zelia.ds;
 
 import com.zelia.ds.map.CustomMap;
+import com.zelia.ds.stack.CustomStack;
 
 public class Program {
 	public static void main(String[] args) {
@@ -24,5 +25,17 @@ public class Program {
 		System.out.println(cmap.keySet().size() + " keys (keyset)" + cmap.size() + " elements (size) "
 				+ (cmap.isEmpty() ? "Empty" : "Not empty"));
 
+		System.out.println();
+		/* CUSTOM STACK */
+		CustomStack<String> cstack = new CustomStack<>();
+		for(int i = 0; i < 20; ++i)
+			cstack.push("#" + i);
+		
+		System.out.println(cstack.getSize() + " elements");
+		
+		for(int i = cstack.getSize(); i != 0; --i){
+			System.out.print(cstack.pop()); 
+		}
+		System.out.println();
 	}
 }
